@@ -1,13 +1,8 @@
-================================================================================
-Portfolio Read Me
-================================================================================
-
-
 General Info
-================================================================================
-Created by: Connor Schulz (1103003) for CIS2430
+==
+Created by: *Connor Schulz for CIS2430 at the University of Guelph*
 
-Last updated: November 29 2021
+Last updated: *November 29 2021*
 
 
 This program is created to help investors keep track of their different investments.
@@ -23,31 +18,26 @@ track of their investments and keep them up to date easily
 
 
 Assumptions and Limitations
-================================================================================
-  - Assumes java is already installed
+==
   - Assumes all inputted values are valid stocks and prices
   - Assumes Files used for input follow the required format
   - Assumes constant commission and redemption fees of $9.99 and $45.00 respectively
 
 User Guide
-================================================================================
+==
 This application can be compiled by cd'ing to the ePortfolio directory and
-running the following commands, where filename represents the name of a file:
+running the following commands, where 'filename' represents the name of a file:
 
-javac *.java
-cd ..
-java ePortfolio.Portfolio "filename.txt"
+`javac *.java`
+`cd ..`
+`java ePortfolio.Portfolio "filename.txt"`
 
 The application should start up in a window and the user will be welcomed by
 the main menu. You can input numbers or the names of options to perform them
 
 
 File Format:
-
-This format is expected for files when being read
-
-"example.txt"
---------------------------------------------------------------------------------
+--
 type = "stock"
 symbol = "APPL"
 name = "Apple Inc."
@@ -62,7 +52,7 @@ quantity = "450"
 price = "500.0"
 bookValue = "23967.0"
 
---------------------------------------------------------------------------------
+---
 
 "type" can only be 'stock' or 'mutualfund' (case sensitive)
 "quantity" must be a valid Integer
@@ -73,8 +63,9 @@ any deviations will result in an exception
 
 
 Submenus
---------------------------------------------------------------------------------
+==
 Buy
+--
   - Choose the investment type (either Stock or Mutual Fund) by using the drop
     down box.
   - Input the symbol for an investment you would like to buy. ex: "TSLA"
@@ -86,8 +77,9 @@ Buy
   - Press Buy once all relevant information has been filled out
 
   - Reset button will clear all the text fields
---------------------------------------------------------------------------------
+
 Sell
+--
   - Input the symbol for the investment you would like to sell. ex: "TSLA"
   - Input the amount of stock/units you would like to sell. ex: "250"
   - Input the selling price of the stock/unit. ex: "160.50"
@@ -95,19 +87,22 @@ Sell
   - Press Sell once all relevant information has been filled out
 
   - Reset button will clear all the text fields
---------------------------------------------------------------------------------
+
 Update
+--
   - For each account, enter a new price. ex: "230.44"
   - Press save to update the price
 
   - Next button will cycle to the next investment
   - Prev button will cycle to the previous investment
---------------------------------------------------------------------------------
+
 Get gain
+--
   - No input required
   - Displays total and individual gains
---------------------------------------------------------------------------------
+
 Search
+--
   - Input the symbol to search for. (Optional) ex. "TSLA"
   - Input a string of search words broken up by spaces. (Optional) ex. "Tesla Motors"
   - Input a price range low end to search for. (Optional) ex. "0", "1000"
@@ -118,17 +113,18 @@ Search
   - Reset button will clear all the text fields
 
   - All investments meeting all search criteria is displayed
---------------------------------------------------------------------------------
+
 Quit
+--
   - No input required
   - Saves investments to file
   - Stops the program
 --------------------------------------------------------------------------------
 
 Test Plan
-================================================================================
+==
 
-------------
+
 File Input
 ------------
 - No file given (results in program printing an error and exiting)
@@ -139,19 +135,19 @@ File Input
 - Given file has 3+ entries (accepts file, all investments created)
 - Given file has incorrect format (results in an exception being thrown, current and remaining investments in the file are not created)
 
-------------
+
 File Output
 ------------
 
 - All current investments should appear in the given file, with correct formatting upon selecting the exit option
 
-------------
+
 Main Menu
 ------------
 
 Test that Each option on the "Commands" bar changes the display to the correct menu, except for quit which should exit the program.
 
-------------
+
 Buy Option
 ------------
 
@@ -172,7 +168,7 @@ Buy Option
 
   - Pressing "Reset" empties all of the text boxes
   - Pressing "Buy" creates a new investment and prints it out to the message box (assuming all input is accepted)
-------------
+
 Sell Option
 ------------
 - If no investments exist, all buttons and input boxes are locked
@@ -196,7 +192,7 @@ Sell Option
 - Pressing "Reset" empties all of the text boxes
 - Pressing "Sell" sells the specified investment and prints it out to the message box (assuming all input is accepted)
 
-------------
+
 Update Option
 ------------
 - If no investments exist, all buttons and input boxes are locked
@@ -213,7 +209,7 @@ Update Option
 
 - Pressing "Save" should update the price of the current investment
 
-------------
+
 Get Gain Option
 ------------
 
@@ -224,7 +220,7 @@ For each stock: multiply the stock quantity by the stock price and subtract the 
 For each Fund: multiply the unit quantity by the unit price and subtract 45 as well as the current book value
 
 Also check situations where no investments exist. Should be 0.0.
-------------
+
 Search Option
 ------------
 - If no investments exist, all buttons and input boxes are locked
@@ -248,15 +244,11 @@ Search Option
 
 - Pressing "Reset" empties all of the text boxes
 - Pressing "Search" will print out all matching investments based on search criteria (assuming all input is accepted)
-------------
+
 Quit Option
 ------------
 
 Ensure that program saves the investments to the specified file correctly and then exits upon selecting quit
 
 
-Future Improvements
-================================================================================
 
-- Make the code easier to read and modify
-- Refactor
