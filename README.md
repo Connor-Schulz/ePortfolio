@@ -2,7 +2,7 @@ General Info
 ==
 Created by: *Connor Schulz for CIS2430 at the University of Guelph*
 
-Last updated: *November 29 2021*
+Last updated: *Jan 6 2022*
 
 
 This program is created to help investors keep track of their different investments.
